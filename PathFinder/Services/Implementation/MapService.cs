@@ -8,7 +8,7 @@ namespace PathFinder.Services.Implementation
     {
         private List<VertexEntity> Map { get; set; }
 
-        private static Random random = new Random(0);
+        private static Random random = new Random();
 
         public MapService(int maxVertex, int maxPaths)
         {

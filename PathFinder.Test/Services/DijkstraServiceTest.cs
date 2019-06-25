@@ -100,10 +100,8 @@ namespace PathFinder.Test.Services
             });
             
             _mapService = new Mock<IMapService>();
-            _mapService.Setup(mock => mock.GetVertexEntities())
-                .Returns(map);
-            _mapService.Setup(mock => mock.GetMapSize())
-                .Returns(map.Count);
+            _mapService.Setup(mock => mock.GetVertexEntities()).Returns(map);
+            _mapService.Setup(mock => mock.GetMapSize()).Returns(map.Count);
             
             _pathFinderService = new DijkstraService(_mapService.Object);
         }
